@@ -19,8 +19,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
 module fac_2 (
         input   wire    [1:0]   a,
         output  wire    [2:0]   Q

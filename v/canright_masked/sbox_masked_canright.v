@@ -1,25 +1,31 @@
-/* S-box & inverse with MASKING, using all normal bases */
-/* revised 2008 November 28 to correct mask re-use problem */
-/* edited 2009 May 8 to fix typos (re-declared variables) */
-/*   NOTE: requires two independent 8-bit masks: input & output */
-/*   based on compact S-box using Canright algorithm */
-/*   optimized using NOR gates and NAND gates */
+/////////////////////////////////////////////////////////////////////////////////
+//
+// Original Author: David Canright
+// Editor: Phaedra Curlin
+// 
+// Create Date: 08/2022
+// Module Name: sbox_masked_canright
+// Project Name: aes-sboxes
+// Description: S-box & inverse with MASKING, using all normal bases.
+//              Adapted from D. Canright's Very Compact "Perfectly Masked" S-Box.
+// 
+// Dependencies: select_not_8, gf_inv_8.
+// 
+// Revision:
+// Revision 0.01 - File Created
+// 
+// Additional Comments: None.
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
-/* NOTE: this was designed including NAND and NOR and MUX21I gates
-   (as in Satoh's "standard library")
-   but my compiler won't compile the correct syntax e.g. ~& and ~|
-   so these are written in a logically equivalent form below.
-   (in most cases could use AND and OR with nearby XNOR replaced by XOR)
-*/
+module sbox_masked_canright ( 
+        input   wire    [7:0]   A,  // input byte
+        input   wire    [7:0]   M,  // input mask 
+        input   wire    [7:0]   N,  // output mask
+        input   wire            encrypt, // S-box = 1, InvS-box = 0 
+        output  wire    [7:0]   Q   // output byte
+    );
 
-/* find either Sbox or its inverse in GF(2^8), by Canright Algorithm */
-/* with MASKING: the input mask M and output mask N must be given */
-module sbox_masked_canright ( A, M, N, encrypt, Q );
-    input  [7:0] A;
-    input  [7:0] M;
-    input  [7:0] N;
-    input        encrypt;  /* 1 for Sbox, 0 for inverse Sbox */
-    output [7:0] Q;
     wire   [7:0] B, C, D, E, F, G, H, V, W, X, Y, Z;
     wire R1, R2, R3, R4, R5, R6, R7, R8, R9;
     wire S1, S2, S3, S4, S5, S6, S7, S8, S9;
@@ -142,4 +148,4 @@ module sbox_masked_canright ( A, M, N, encrypt, Q );
     assign X[0] = ~ C[2] ;
     assign Q = ~(encrypt? D : X);
 
-endmodule
+endmodule // sbox_masked_canright

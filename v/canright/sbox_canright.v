@@ -5,7 +5,7 @@
 // 
 // Create Date: 08/2022
 // Module Name: sbox_canright
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Find either Sbox or its inverse in GF(2^8), by Canright Algorithm
 //              Adapted from D. Canright's Very Compact S-Box.
 // 
@@ -18,8 +18,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module sbox_canright (
         input   wire    [7:0]   A,

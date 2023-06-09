@@ -4,7 +4,7 @@
 // 
 // Create Date: 10/2022
 // Module Name: affine_transform
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Affine transform for the S-box.
 //              Effectively computes:
 //                  for (i=0;i<8;i++){
@@ -21,9 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module affine_transform(
+module affine_transform (
         input   wire    [7:0]   byte_in,
         input   wire            encrypt,
         output  wire    [7:0]   byte_out

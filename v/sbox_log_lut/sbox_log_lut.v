@@ -4,7 +4,7 @@
 // 
 // Create Date: 11/2022
 // Module Name: sbox_log_lut
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Log and Exp LUT based S-box.
 // 
 // Dependencies: affine_transform, log_inverter, invaffine_transform.
@@ -16,8 +16,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module sbox_log_lut(
         input   wire    [7:0]   byte_in,

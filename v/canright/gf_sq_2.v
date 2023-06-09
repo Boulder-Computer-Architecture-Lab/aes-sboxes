@@ -5,7 +5,7 @@
 // 
 // Create Date: 08/2022
 // Module Name: gf_sq_2
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Square in GF(2^2), using normal basis [Omega^2,Omega]. Inverse
 //              is the same as square in GF(2^2), using any normal basis.
 //              Adapted from D. Canright's Very Compact S-Box.
@@ -30,5 +30,3 @@ module gf_sq_2 (
     assign Q = {A[0], A[1]};
 
 endmodule // gf_sq_2
-
-`default_nettype wire

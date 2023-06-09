@@ -5,7 +5,7 @@
 // 
 // Create Date: 10/2022
 // Module Name: pprm_stage_1
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Stage 1 of the 3-stage PPRM inverter.
 // 
 // Dependencies: None.
@@ -19,9 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module pprm_stage_1(
+module pprm_stage_1 (
         input   wire    [7:0]   X,
         output  wire    [3:0]   A,
         output  wire    [3:0]   B,

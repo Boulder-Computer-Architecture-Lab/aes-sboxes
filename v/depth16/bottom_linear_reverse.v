@@ -5,7 +5,7 @@
 // 
 // Create Date: 10/2022
 // Module Name: bottom_linear_reverse
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Bottom linear transform in reverse direction.
 // 
 // Dependencies: None.
@@ -19,8 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module bottom_linear_reverse (
         input   wire    [62:0]  M,

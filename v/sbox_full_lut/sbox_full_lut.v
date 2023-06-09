@@ -4,7 +4,7 @@
 // 
 // Create Date: 08/2022
 // Module Name: sbox_full_lut
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: MUX implementation of the AES S-box.
 // 
 // Dependencies: None.
@@ -16,8 +16,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module sbox_full_lut (
         input   wire            encrypt,

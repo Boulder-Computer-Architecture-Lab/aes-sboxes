@@ -4,7 +4,7 @@
 // 
 // Create Date: 10/2022
 // Module Name: inverter_tb
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Testbench for evaluating sbox's inverter bytes.
 // 
 // Dependencies: pprm_inverter, log_inverter.
@@ -16,8 +16,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 // Select one and comment out undesired S-boxes
 // `define INVERTER_PPRM
@@ -47,7 +45,7 @@ module inverter_tb();
     initial begin
         clk = 1; // Initialize clock to 1
         byte_in = 0; // Initialize input byte to 0
-        $readmemh("tb/mem/sbox/inverter.mem", expected_inversion); // Load values from memory
+        $readmemh("tb/mem/inverter.mem", expected_inversion); // Load values from memory
     end
 
     //----------------------------------------------------------------
@@ -74,13 +72,6 @@ module inverter_tb();
         );
     `endif
 
-    // Akkar
-    `ifdef INVERTER_AKKAR
-        inverter_akkar UUT(
-            .A(byte_in),
-            .Z(byte_out)
-        );
-    `endif
     //----------------------------------------------------------------
     // Testbench
     //----------------------------------------------------------------
@@ -103,5 +94,3 @@ module inverter_tb();
     end
 
 endmodule // inverter_tb
-
-`default_nettype wire

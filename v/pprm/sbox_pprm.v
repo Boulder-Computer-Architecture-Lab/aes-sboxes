@@ -5,7 +5,7 @@
 // 
 // Create Date: 10/2022
 // Module Name: sbox_pprm
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: 3-stage Positive-Polarity Reed Muller S-box.
 // 
 // Dependencies: affine_transform, pprm_inverter, invaffine_transform.
@@ -19,9 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module sbox_pprm(
+module sbox_pprm (
         input   wire    [7:0]   byte_in,
         input   wire            encrypt,
         output  wire    [7:0]   byte_out

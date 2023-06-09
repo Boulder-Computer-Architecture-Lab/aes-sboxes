@@ -4,7 +4,7 @@
 // 
 // Create Date: 10/2022
 // Module Name: sbox_tb
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Testbench for evaluating S-boxes bytes.
 //              Verifies all S-box and InvSbox values output by the module.
 // 
@@ -19,8 +19,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
 // Select one and comment out undesired S-boxes
 // `define SBOX_CANRIGHT
 // `define SBOX_CANRIGHT_MASKED
@@ -32,7 +30,7 @@
 // `define SBOX_DEPTH16
 // `define SBOX_NEW_AREA
 
-module sbox_tb();
+module sbox_tb ();
     //----------------------------------------------------------------
     // Integers
     //----------------------------------------------------------------
@@ -62,8 +60,8 @@ module sbox_tb();
         clk = 1; // Initialize clock to 1
         byte_in = 0; // Initialize input byte to 0
         encrypt = 1;
-        $readmemh("tb/mem/sbox/sbox.mem", expected_sbox); // Load values from memory
-        $readmemh("tb/mem/sbox/inv_sbox.mem", expected_inv_sbox); // Load from memory
+        $readmemh("tb/mem/sbox.mem", expected_sbox); // Load values from memory
+        $readmemh("tb/mem/inv_sbox.mem", expected_inv_sbox); // Load from memory
     end
 
     //----------------------------------------------------------------

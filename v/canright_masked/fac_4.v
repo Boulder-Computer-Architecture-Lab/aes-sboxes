@@ -5,7 +5,7 @@
 // 
 // Create Date: 11/2022
 // Module Name: fac_4
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Sums for shared factors, 4-bit -> 9.
 //              Adapted from D. Canright's Very Compact S-Box.
 // 
@@ -18,8 +18,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module fac_4 (
         input   wire    [3:0]   a,

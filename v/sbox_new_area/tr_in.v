@@ -5,7 +5,7 @@
 // 
 // Create Date: 11/2022
 // Module Name: tr_in
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Transform in.
 // 
 // Dependencies: None.
@@ -19,9 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module tr_in(
+module tr_in (
         input wire  [7:0]   G,
         input wire          encrypt,
         output wire [3:0]   A,

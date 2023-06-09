@@ -5,7 +5,7 @@
 // 
 // Create Date: 11/2022
 // Module Name: exp
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Exponentiation.
 // 
 // Dependencies: None.
@@ -19,9 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module exp(
+module exp (
         input wire  [3:0]   A,
         input wire  [3:0]   B,
         output wire [3:0]   D,
@@ -29,8 +27,8 @@ module exp(
         output wire         Bp
     );
 
-    assign Ap = (A[0]^A[2]) ^ (A[1]^A[3]);
-    assign Bp = (B[0]^B[2]) ^ (B[1]^B[3]);
+    assign Ap = (A[0] ^ A[2]) ^ (A[1] ^ A[3]);
+    assign Bp = (B[0] ^ B[2]) ^ (B[1] ^ B[3]);
 
     assign D[0] = (((A[0] ^ A[1]) & (B[0] ^ B[1])) ^ (A[0] ^ A[2]) & (B[0] ^ B[2]) ^ (A[0] & B[0]) ^ ((A[1] ^ A[3]) | (B[1] ^ B[3])));
     assign D[1] = (((A[0] ^ A[1]) & (B[0] ^ B[1])) ^ ((A[0] ^ A[2]) | (B[0] ^ B[2])) ^ (A[1] & B[1]) ^ (Ap & Bp));

@@ -5,7 +5,7 @@
 // 
 // Create Date: 10/2022
 // Module Name: middle_nonlinear_shared
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description:  Shared part of AES S-box circuit
 // 
 // Dependencies: None.
@@ -21,9 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module middle_nonlinear_shared(
+module middle_nonlinear_shared (
         input   wire    [26:0]  T,
         input   wire            D, 
         output  wire    [62:0]  M

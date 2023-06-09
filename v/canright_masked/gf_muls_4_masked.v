@@ -5,7 +5,7 @@
 // 
 // Create Date: 11/2022
 // Module Name: gf_muls_4_masked
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Multiply in GF(2^4)/GF(2^2), shared factors, 
 //              basis [alpha^8, alpha^2].
 //              Adapted from D. Canright's Very Compact S-Box.
@@ -19,8 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module gf_muls_4_masked (
         input  [8:0] A,     /* shared factors include bit sums: sum hi lo */

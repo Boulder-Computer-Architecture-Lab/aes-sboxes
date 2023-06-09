@@ -5,7 +5,7 @@
 // 
 // Create Date: 08/2022
 // Module Name: pprm_inverter
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: GF(2^8) inverter for the 3-Stage Positive-Polarity
 //              Reed Muller S-box.
 // 
@@ -20,9 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module pprm_inverter(
+module pprm_inverter (
         input   wire    [7:0]   X,
         output  wire    [7:0]   Y
     );

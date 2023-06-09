@@ -5,7 +5,7 @@
 // 
 // Create Date: 08/2022
 // Module Name: gf_muls_scl_2
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Multiply & scale by N in GF(2^2), shared factors, basis 
 //              [Omega^2,Omega]. Adapted from D. Canright's Very Compact S-Box.
 // 
@@ -18,8 +18,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module gf_muls_scl_2 (
         input   wire    [1:0]   A,
@@ -37,5 +35,3 @@ module gf_muls_scl_2 (
     assign Q = { p, q };
 
 endmodule // gf_muls_scl_2
-
-`default_nettype wire

@@ -5,7 +5,7 @@
 // 
 // Create Date: 08/2022
 // Module Name: gf_inv_4
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Inverse in GF(2^4)/GF(2^2), using normal basis [alpha^8, alpha^2]
 //              Adapted from D. Canright's Very Compact S-Box.
 // 
@@ -18,8 +18,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module gf_inv_4 (
         input   wire    [3:0]   A,

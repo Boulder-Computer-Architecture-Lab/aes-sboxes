@@ -5,7 +5,7 @@
 // 
 // Create Date: 11/2022
 // Module Name: tr_out
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Transform out.
 // 
 // Dependencies: None.
@@ -18,8 +18,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module tr_out (
         input wire [3:0] W,

@@ -5,7 +5,7 @@
 // 
 // Create Date: 11/2022
 // Module Name: subfield_inv
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Subfield inversion in GF((2^2)^2)
 // 
 // Dependencies: None.
@@ -19,9 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module subfield_inv(
+module subfield_inv (
         input   wire    [3:0]   D,
         output  wire    [3:0]   E
     );

@@ -5,7 +5,7 @@
 // 
 // Create Date: 10/2022
 // Module Name: top_linear_forward
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Top linear transform in forward direction
 // 
 // Dependencies: None.
@@ -20,9 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module top_linear_forward(
+module top_linear_forward (
         input   wire    [7:0]   U,
         output  wire    [26:0]  T
     );

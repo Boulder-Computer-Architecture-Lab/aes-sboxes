@@ -4,7 +4,7 @@
 // 
 // Create Date: 12/2022
 // Module Name: sbox_bdd
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: Binary Decision Diagram S-box.
 // 
 // Dependencies: None. 
@@ -16,8 +16,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module sbox_bdd (
         input   wire            encrypt,

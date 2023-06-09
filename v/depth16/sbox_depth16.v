@@ -5,7 +5,7 @@
 // 
 // Create Date: 10/2022
 // Module Name: sbox_depth16
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: A depth-16, bitsliced S-box.
 // 
 // Dependencies: 
@@ -19,9 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-`default_nettype none
-
-module sbox_depth16(
+module sbox_depth16 (
         input   wire    [7:0]   byte_in,
         input   wire            encrypt,
         output  wire    [7:0]   byte_out

@@ -4,7 +4,7 @@
 // 
 // Create Date: 08/2022
 // Module Name: sbox_full_rom
-// Project Name: aes-v
+// Project Name: aes-sboxes
 // Description: ROM implementation of the AES S-box.
 // 
 // Dependencies: invsbox.mem, sbox.mem.
@@ -16,8 +16,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module sbox_full_rom (
         input   wire            encrypt,
@@ -52,5 +50,3 @@ module sbox_full_rom (
     end
 
 endmodule // sbox_full_rom
-
-`default_nettype wire
