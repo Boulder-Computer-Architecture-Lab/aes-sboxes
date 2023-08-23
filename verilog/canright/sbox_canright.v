@@ -20,9 +20,9 @@
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module sbox_canright (
-        input   wire    [7:0]   A,
+        input   wire    [7:0]   byte_in,
         input   wire            encrypt,
-        output  wire    [7:0]   Q
+        output  wire    [7:0]   byte_out
     );
 
     wire [7:0] B, C, D, X, Y, Z;
@@ -30,31 +30,31 @@ module sbox_canright (
     wire T1, T2, T3, T4, T5, T6, T7, T8, T9, T10;
     /* change basis from GF(2^8) to GF(2^8)/GF(2^4)/GF(2^2) */
     /* combine with bit inverse matrix multiply of Sbox */
-    assign R1 = A[7] ^ A[5] ;
-    assign R2 = A[7] ~^ A[4] ;
-    assign R3 = A[6] ^ A[0] ;
-    assign R4 = A[5] ~^ R3 ;
-    assign R5 = A[4] ^ R4 ;
-    assign R6 = A[3] ^ A[0] ;
-    assign R7 = A[2] ^ R1 ;
-    assign R8 = A[1] ^ R3 ;
-    assign R9 = A[3] ^ R8 ;
+    assign R1 = byte_in[7] ^ byte_in[5] ;
+    assign R2 = byte_in[7] ~^ byte_in[4] ;
+    assign R3 = byte_in[6] ^ byte_in[0] ;
+    assign R4 = byte_in[5] ~^ R3 ;
+    assign R5 = byte_in[4] ^ R4 ;
+    assign R6 = byte_in[3] ^ byte_in[0] ;
+    assign R7 = byte_in[2] ^ R1 ;
+    assign R8 = byte_in[1] ^ R3 ;
+    assign R9 = byte_in[3] ^ R8 ;
     assign B[7] = R7 ~^ R8 ;
     assign B[6] = R5 ;
-    assign B[5] = A[1] ^ R4 ;
+    assign B[5] = byte_in[1] ^ R4 ;
     assign B[4] = R1 ~^ R3 ;
-    assign B[3] = A[1] ^ R2 ^ R6 ;
-    assign B[2] = ~ A[0] ;
+    assign B[3] = byte_in[1] ^ R2 ^ R6 ;
+    assign B[2] = ~ byte_in[0] ;
     assign B[1] = R4 ;
-    assign B[0] = A[2] ~^ R9 ;
+    assign B[0] = byte_in[2] ~^ R9 ;
     assign Y[7] = R2 ;
-    assign Y[6] = A[4] ^ R8 ;
-    assign Y[5] = A[6] ^ A[4] ;
+    assign Y[6] = byte_in[4] ^ R8 ;
+    assign Y[5] = byte_in[6] ^ byte_in[4] ;
     assign Y[4] = R9 ;
-    assign Y[3] = A[6] ~^ R2 ;
+    assign Y[3] = byte_in[6] ~^ R2 ;
     assign Y[2] = R7 ;
-    assign Y[1] = A[4] ^ R6 ;
-    assign Y[0] = A[1] ^ R5 ;
+    assign Y[1] = byte_in[4] ^ R6 ;
+    assign Y[0] = byte_in[1] ^ R5 ;
     assign Z = ~(encrypt? B : Y);
     gf_inv_8 inv( Z, C );
     /* change basis back from GF(2^8)/GF(2^4)/GF(2^2) to GF(2^8) */
@@ -84,5 +84,5 @@ module sbox_canright (
     assign X[2] = C[7] ~^ T7 ;
     assign X[1] = T6 ;
     assign X[0] = ~ C[2] ;
-    assign Q = ~(encrypt? D : X);
+    assign byte_out = ~(encrypt? D : X);
 endmodule // sbox_canright

@@ -51,8 +51,8 @@ module sbox_pprm (
 
     // 3-stage PPRM inverter
     pprm_inverter inverter(
-        .X(inverter_in),
-        .Y(inverter_out)
+        .inverter_in(inverter_in),
+        .inverter_out(inverter_out)
     );
 
     // Inverse affine transformation

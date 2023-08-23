@@ -4,9 +4,9 @@
 // Adapted by: Phaedra Curlin
 // 
 // Create Date: 11/2022
-// Module Name: subfield_inv
+// Module Name: sbox_new_area
 // Project Name: aes-sboxes
-// Description: Subfield inversion in GF((2^2)^2)
+// Description: New Area S-box
 // 
 // Dependencies: tr_in, expo, subfield_inv, out_mult, tr_out.
 // 

@@ -551,4 +551,4 @@ module sbox_full_lut (
         end
     end
 
-endmodule // sbox_full_lut
+endmodule // sbox_case_lut

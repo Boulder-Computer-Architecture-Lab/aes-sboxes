@@ -4,7 +4,7 @@
 // Adapted by: Phaedra Curlin
 // 
 // Create Date: 11/2022
-// Module Name: subfield_inv
+// Module Name: out_mult
 // Project Name: aes-sboxes
 // Description: Output multiplier.
 // 

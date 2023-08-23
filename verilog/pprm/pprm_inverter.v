@@ -21,8 +21,8 @@
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module pprm_inverter (
-        input   wire    [7:0]   X,
-        output  wire    [7:0]   Y
+        input   wire    [7:0]   inverter_in,
+        output  wire    [7:0]   inverter_out
     );
     
     //----------------------------------------------------------------
@@ -35,7 +35,7 @@ module pprm_inverter (
     //----------------------------------------------------------------
     // PPRM Inverter Stage 1
     pprm_stage_1 stage1(
-        .X(X),
+        .X(inverter_in),
         .A(A),
         .B(B),
         .C(C)
@@ -52,7 +52,7 @@ module pprm_inverter (
        .A(A),
        .B(B),
        .D(D),
-       .Y(Y)
+       .Y(inverter_out)
     );
     
 endmodule // pprm_inverter

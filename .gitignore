@@ -1,0 +1,12 @@
+# MAC OS
+.DS_Store
+# iverilog
+ivl_vhdl_work/
+*.out
+# Python
+__pycache__/
+# cocotb
+sim_build/
+*.xml
+# pytests
+.pytest_cache/

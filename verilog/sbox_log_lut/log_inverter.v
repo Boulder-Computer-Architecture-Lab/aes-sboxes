@@ -18,8 +18,8 @@
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module log_inverter (
-        input   wire    [7:0]   byte_in,
-        output  wire    [7:0]   byte_out
+        input   wire    [7:0]   inverter_in,
+        output  wire    [7:0]   inverter_out
     );
 
     //----------------------------------------------------------------
@@ -27,10 +27,10 @@ module log_inverter (
     //----------------------------------------------------------------
     reg [7:0] log, temp, exp;
 
-    assign byte_out = exp;
+    assign inverter_out = exp;
     
-    always @(byte_in) begin
-        case(byte_in)
+    always @(inverter_in) begin
+        case(inverter_in)
             8'h00: log = 8'h00;
             8'h01: log = 8'h00;
             8'h02: log = 8'h19;
