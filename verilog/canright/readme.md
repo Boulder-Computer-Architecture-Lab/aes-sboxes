@@ -1,1 +1,0 @@
-# "Very Compact" S-box

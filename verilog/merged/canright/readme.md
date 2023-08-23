@@ -1,1 +1,1 @@
-# Canright's "Very Compact" S-box
+# "Very Compact" S-box
