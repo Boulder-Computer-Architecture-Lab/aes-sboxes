@@ -1,0 +1,3 @@
+[submodule "vhdl/secure/NullFresh"]
+	path = vhdl/secure/NullFresh
+	url = https://github.com/Chair-for-Security-Engineering/NullFresh.git
