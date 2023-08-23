@@ -1,3 +1,9 @@
-[submodule "vhdl/secure/NullFresh"]
-	path = vhdl/secure/NullFresh
+[submodule "aes/encrypt/NullFresh"]
+	path = aes/encrypt/NullFresh
 	url = https://github.com/Chair-for-Security-Engineering/NullFresh.git
+[submodule "aes/encrypt/aes-dom"]
+	path = aes/encrypt/aes-dom
+	url = https://github.com/hgrosz/aes-dom.git
+[submodule "aes/encrypt/self-synchronized-masking"]
+	path = aes/encrypt/self-synchronized-masking
+	url = https://extgit.iaik.tugraz.at/sesys/self-synchronized-masking.git
