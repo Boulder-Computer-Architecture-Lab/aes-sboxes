@@ -1,1 +1,0 @@
-# Depth-16 S-box
