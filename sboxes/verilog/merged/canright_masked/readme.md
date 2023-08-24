@@ -1,0 +1,1 @@
+# "Very Compact 'Perfectly Masked'" S-box

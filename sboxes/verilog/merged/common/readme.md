@@ -1,0 +1,1 @@
+Common components used by multiple S-boxes.
