@@ -18,9 +18,6 @@
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-`default_nettype none
 
 module gf_sq_2 (
         input   wire    [1:0]   A,

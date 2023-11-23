@@ -18,7 +18,6 @@
 //                      T1-T27 to be represented as T0-T26
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module top_linear_forward (
         input   wire    [7:0]   U,

@@ -17,7 +17,6 @@
 //                      Combined S-Box/Inverse S-Box"
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module exp (
         input wire  [3:0]   A,

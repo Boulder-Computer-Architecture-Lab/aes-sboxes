@@ -18,7 +18,6 @@
 //                      assign T[0]-T[26] to be represented as T0-T[25]
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module top_linear_reverse (
         input   wire    [7:0]   U,

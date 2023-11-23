@@ -18,7 +18,6 @@
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module gf_muls_2_masked (
         input   wire    [2:0]   A, /* shared factors include bit sum: sum hi lo */

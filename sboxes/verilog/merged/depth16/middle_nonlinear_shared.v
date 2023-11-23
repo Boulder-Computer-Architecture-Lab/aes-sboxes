@@ -19,7 +19,6 @@
 //                      M1-M63 which is shifted to M0-M62.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module middle_nonlinear_shared (
         input   wire    [26:0]  T,

@@ -17,7 +17,6 @@
 //                      Architecture for Low Power AES Design".
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module pprm_stage_2 (
         input   wire    [3:0]   C,

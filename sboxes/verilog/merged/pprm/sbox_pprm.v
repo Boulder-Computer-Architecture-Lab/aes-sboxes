@@ -17,7 +17,6 @@
 //                      Architecture for Low Power AES Design".
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module sbox_pprm (
         input   wire    [7:0]   byte_in,

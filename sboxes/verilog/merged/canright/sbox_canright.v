@@ -17,7 +17,6 @@
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module sbox_canright (
         input   wire    [7:0]   byte_in,
@@ -85,4 +84,5 @@ module sbox_canright (
     assign X[1] = T6 ;
     assign X[0] = ~ C[2] ;
     assign byte_out = ~(encrypt? D : X);
+    
 endmodule // sbox_canright

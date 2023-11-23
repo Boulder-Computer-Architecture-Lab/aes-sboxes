@@ -19,7 +19,6 @@
 // Additional Comments: Calculations defined in the FIPS 197 standard.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module affine_transform (
         input   wire    [7:0]   byte_in,

@@ -18,7 +18,6 @@
 //                      Architecture for Low Power AES Design".
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module pprm_inverter (
         input   wire    [7:0]   inverter_in,

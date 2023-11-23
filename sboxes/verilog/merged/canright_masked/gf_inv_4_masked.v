@@ -17,7 +17,6 @@
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module gf_inv_4_masked (
     input   wire  [3:0]  A,
@@ -26,9 +25,9 @@ module gf_inv_4_masked (
     output  wire  [3:0]  Q
   );
 
-  wire   [1:0] a, b, m, n, c, cm, e, d, p, q, an, mb, mn, m2, dn, em, pm, qm;
-  wire   [1:0] csa, csb, cst, qsa, qsb, dm, psa, psb; /* partial sums */
-  wire   [2:0] af, bf, mf, nf, ef, df;  /* factors w/ bit sums */
+  wire [1:0] a, b, m, n, c, cm, e, d, p, q, an, mb, mn, m2, dn, em, pm, qm;
+  wire [1:0] csa, csb, cst, qsa, qsb, dm, psa, psb; /* partial sums */
+  wire [2:0] af, bf, mf, nf, ef, df;  /* factors w/ bit sums */
   
   assign a = A[3:2];
   assign b = A[1:0];

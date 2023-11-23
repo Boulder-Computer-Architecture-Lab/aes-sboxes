@@ -18,7 +18,6 @@
 //                      M1-M63 to be represented as M0-M62
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module bottom_linear_reverse (
         input   wire    [62:0]  M,

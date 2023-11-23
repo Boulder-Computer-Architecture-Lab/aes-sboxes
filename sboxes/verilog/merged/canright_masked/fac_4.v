@@ -17,14 +17,13 @@
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module fac_4 (
         input   wire    [3:0]   a,
         output  wire    [8:0]   Q
     );
 
-    wire   [1:0] sa;
+    wire [1:0] sa;
     wire al, ah, aa;
     
     assign sa = a[3:2] ^ a[1:0];
