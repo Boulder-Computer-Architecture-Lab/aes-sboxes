@@ -1,0 +1,9 @@
+name,area (um),power (W),delay (ps)
+Full LUT,214.696,3.61293e-04,80
+Inverse LUT,276.382,9.08550e-04,87
+Canright,62.620,9.48801e-04,194
+Boyar & Peralta,94.077,1.22599e-03,157
+Reyhani-Masoleh et al.,62.374,1.01978e-03,186
+Maximov & Ekdahl,66.552,8.84283e-04,121
+BDD,205.455,1.15024e-03,120
+PPRM,90.636,1.42412e-03,194
