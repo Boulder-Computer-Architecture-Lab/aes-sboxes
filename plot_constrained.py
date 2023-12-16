@@ -7,6 +7,17 @@ nand2 = 0.196608
 # Color-blind friendly palette
 color_cycle = ["#999999", "#000000", "#E69F00", "#56B4E9", "#0072B2", "#D55E00", "#CC79A7","#009E73","#F0E442"]
 
+design = {
+    "sbox_bdd": "BDD",
+    "sbox_canright": "Canright",
+    "sbox_depth16": "Boyar & Peralta",
+    "sbox_full_lut": "Full LUT",
+    "sbox_inv_lut": "Inverse LUT",
+    "sbox_maximov": "Maximov & Ekdahl",
+    "sbox_new_area": "Reyhani-Masoleh et al.",
+    "sbox_pprm": "PPRM",
+}
+
 # Set the font sizes
 plt.rcParams['font.size'] = 13
 plt.rcParams['axes.labelsize'] = 13
@@ -21,7 +32,10 @@ df = pd.read_csv('results/15constrained.csv')
 fig, axs = plt.subplots(1, 2, figsize=(10, 3.75))
 
 # Find unique S-box names
+# Convert names from dictonary
+df['name'] = df['name'].map(design)
 names = df['name'].unique()
+
 
 # Divide all area entries by nand2
 df['gate equivalents'] = df['area (um)'] / nand2
@@ -31,10 +45,10 @@ for i, name in enumerate(names):
     # Get subset of df
     df_subset = df[df['name'] == name]
     # Plot according to target clock on x-axis
-    axs[0].plot(df_subset['target clock (ps)'], df_subset['gate equivalents'],'-',color=color_cycle[i],linewidth=2)
+    axs[0].plot(df_subset['clock (ps)'], df_subset['gate equivalents'],'-',color=color_cycle[i],linewidth=2)
     
 # Set limits
-axs[0].set_xlim(df['target clock (ps)'].min(), df['target clock (ps)'].max())
+axs[0].set_xlim(df['clock (ps)'].min(), df['clock (ps)'].max())
 # Add grid
 axs[0].grid()
 # Titles
@@ -42,20 +56,20 @@ axs[0].set_xlabel('Target Clock Period (ps)')
 axs[0].set_ylabel('Gate Equivalents')
 
 # Multiply all power entries by 1e6 in df by 1e6
-df['power (uW)'] = df['power (W)'] * 1e6
+df['power (mW)'] = df['power (W)'] * 1e3
 
 # Do the same but for power
 for i, name in enumerate(names):
     df_subset = df[df['name'] == name]
-    axs[1].plot(df_subset['target clock (ps)'], df_subset['power (uW)'],'-',color=color_cycle[i],linewidth=2)
+    axs[1].plot(df_subset['clock (ps)'], df_subset['power (mW)'],'-',color=color_cycle[i],linewidth=2)
 
 # Set limits
-axs[1].set_xlim(df['target clock (ps)'].min(), df['target clock (ps)'].max())
+axs[1].set_xlim(df['clock (ps)'].min(), df['clock (ps)'].max())
 # Add grid
 axs[1].grid()
 # Titles
 axs[1].set_xlabel('Target Clock Period (ps)')
-axs[1].set_ylabel('Power $(\mu W)$')
+axs[1].set_ylabel('Power $(mW)$')
 
 # Add legend
 fig.legend(names, loc='upper center', bbox_to_anchor=(0.5, 1), ncol=3,frameon=False)

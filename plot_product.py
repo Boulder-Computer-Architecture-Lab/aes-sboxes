@@ -7,6 +7,17 @@ from paretoset import paretoset
 # Nangate15nm library NAND2_X1
 nand2 = 0.196608
 
+design = {
+    "sbox_bdd": "BDD",
+    "sbox_canright": "Canright",
+    "sbox_depth16": "Boyar & Peralta",
+    "sbox_full_lut": "Full LUT",
+    "sbox_inv_lut": "Inverse LUT",
+    "sbox_maximov": "Maximov & Ekdahl",
+    "sbox_new_area": "Reyhani-Masoleh et al.",
+    "sbox_pprm": "PPRM",
+}
+
 # Set the font sizes
 plt.rcParams['font.size'] = 13
 plt.rcParams['axes.labelsize'] = 13
@@ -21,6 +32,7 @@ df = pd.read_csv('results/15product.csv')
 df['gate equivalents'] = df['area (um)'] / nand2
 
 # Get unique names
+df['name'] = df['name'].map(design)
 names = df['name'].unique()
 
 
@@ -41,13 +53,7 @@ for i, name in enumerate(names):
     # Plot according to target clock on x-axis on the first subplot
     axs[0].plot(df_subset['gate equivalents'],df_subset['delay (ps)'],'o', color=color_cycle[i],markersize=9)    
 
-# create df subset from ge and delay
-df_subset = df[['gate equivalents','delay (ps)']]
-mask = paretoset(df_subset, sense=["min", "min"])
-top = df[mask]
-# Reorder from smallest gate to largest
-top = top.sort_values(by=['gate equivalents'])
-axs[0].plot(top["gate equivalents"], top["delay (ps)"], '--', color="red", label="Pareto Frontier")
+
 
 # Create legend for each name and place beneath title
 axs[0].grid()
@@ -63,24 +69,21 @@ for i, name in enumerate(names):
     df_subset = df[df['name'] == name]
     axs[1].plot(df_subset['gate equivalents'],df_subset['power (mW)'],'o', color=color_cycle[i], markersize=9)
     
-# Pareto frontier
-df_subset = df[['gate equivalents','power (mW)']]
-mask = paretoset(df_subset, sense=["min", "min"])
-top = df[mask]
-# Reorder from smallest gate to largest
-top = top.sort_values(by=['gate equivalents'])
-axs[1].plot(top["gate equivalents"], top['power (mW)'], '--', color="red", label="Pareto Frontier")
-
 # plt.legend(names, loc='upper center', bbox_to_anchor=(0.5, 1.25), ncol=3,frameon=False)
 axs[1].grid()
 axs[1].set_ylabel('Power $(mW)$')
 axs[1].set_xlabel('Gate Equivalents')
 
-key = np.append(names,"Pareto Frontier")
 
-fig.legend(key, loc='upper center', bbox_to_anchor=(0.5, 1), ncol=3,frameon=False)
+fig.legend(names, loc='upper center', bbox_to_anchor=(0.5, 1), ncol=3,frameon=False)
 fig.tight_layout()
 fig.subplots_adjust(top=0.75,bottom=0.15)
 
 fig.savefig('fig/15product.pdf')
 
+# Print the area-delay product
+df['area-delay'] = df['area (um)'] * df['delay (ps)']
+print(df.sort_values(by='area-delay'))
+# Print the area-power product
+df['area-power'] = df['area (um)'] * df['power (mW)']
+print(df.sort_values(by='area-power'))
