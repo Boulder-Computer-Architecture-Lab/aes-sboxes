@@ -5,7 +5,7 @@ This repository contains a database of HDL code for ASIC compatible AES and AES 
 
 To clone the repository and its submodules, run:
 ```
-git clone --recursive https://github.com/Boulder-Computer-Architecture-Lab/aes-sboxes.git
+git clone --recursive https://github.com/Boulder-Computer-Architecture-Lab/aes-db.git
 ```
 
 ## AES Implementations
