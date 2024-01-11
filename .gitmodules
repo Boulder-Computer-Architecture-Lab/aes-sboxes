@@ -7,3 +7,6 @@
 [submodule "aes/encrypt/self-synchronized-masking"]
 	path = aes/encrypt/self-synchronized-masking
 	url = https://extgit.iaik.tugraz.at/sesys/self-synchronized-masking.git
+[submodule "aes/encrypt/aes-secondorder-guards"]
+	path = aes/encrypt/aes-secondorder-guards
+	url = https://github.com/barbara-gigerl/aes-secondorder-guards.git
