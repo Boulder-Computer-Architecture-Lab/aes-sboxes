@@ -1,6 +1,6 @@
 # A Database for AES and AES S-boxes Implementations
 
-This is a repository containing a database ASIC compatible AES and AES S-box implementations.
+This is a repository containing a database of HDL code for ASIC compatible AES and AES S-box implementations.
 
 To clone the repository and its submodules, run:
 ```
