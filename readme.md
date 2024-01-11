@@ -1,4 +1,5 @@
-# A Database for AES and AES S-boxes Implementations
+# AES and AES S-boxes HDL Database
+
 
 This repository contains a database of HDL code for ASIC compatible AES and AES S-box implementations.
 
