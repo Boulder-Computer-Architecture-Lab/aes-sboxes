@@ -1,6 +1,8 @@
 # A Database for AES and AES S-boxes Implementations
 
-To clone the repository and its submodules:
+This is a repository containing a database ASIC compatible AES and AES S-box implementations.
+
+To clone the repository and its submodules, run:
 ```
 git clone --recursive https://github.com/Boulder-Computer-Architecture-Lab/aes-sboxes.git
 ```
