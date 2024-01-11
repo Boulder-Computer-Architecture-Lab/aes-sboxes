@@ -10,3 +10,6 @@
 [submodule "aes/encrypt/aes-secondorder-guards"]
 	path = aes/encrypt/aes-secondorder-guards
 	url = https://github.com/barbara-gigerl/aes-secondorder-guards.git
+[submodule "aes-secondorder-guards"]
+	path = aes-secondorder-guards
+	url = https://github.com/barbara-gigerl/aes-secondorder-guards.git
