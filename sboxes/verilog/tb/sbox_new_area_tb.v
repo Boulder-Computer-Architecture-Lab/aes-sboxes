@@ -1,17 +1,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 //
-// Author: Phaedra Curlin
+// Author:
 // 
 // Create Date: 10/2022
-// Module Name: sbox_tb
-// Project Name: aes-sboxes
+// Module Name: sbox_new_area_tb
+// Project Name: aes_sboxes
 // Description: Testbench for evaluating S-boxes bytes.
 //              Verifies all S-box and InvSbox values output by the module.
 // 
 // Dependencies: sbox_new_area
-// 
-// Revision: 
-// Revision 0.01 - File Created
 // 
 // Additional Comments: None.
 // 
@@ -105,4 +102,4 @@ module sbox_new_area_tb ();
         $finish;
     end
 
-endmodule // sbox_tb
+endmodule // sbox_new_area_tb

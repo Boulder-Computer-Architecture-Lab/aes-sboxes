@@ -1,18 +1,15 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: David Canright
-// Editor: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 11/2022
 // Module Name: fac_2
-// Project Name: aes-v
+// Project Name: aes_sboxes
 // Description: Sums for shared factors, 2-bit -> 3.
 //              Adapted from D. Canright's Very Compact S-Box.
 // 
-// Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
+// Dependencies: None. 
 // 
 // Additional Comments: None.
 // 
@@ -25,7 +22,6 @@ module fac_2 (
     
     wire   sa;
     assign sa = a[1] ^ a[0];
-    /* output is three 1-bit shared factors: sum hi lo */
     assign Q = { sa, a };
 
 endmodule // fac_2

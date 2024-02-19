@@ -1,17 +1,14 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Boyar and Peralta
-// Adapted by: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 10/2022
 // Module Name: middle_nonlinear_shared
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description:  Shared part of AES S-box circuit
 // 
 // Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: Based on design from "A depth-16 circuit for the
 //                      AES S-box". Shifted values from original in paper for

@@ -1,17 +1,15 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Boyar and Peralta
-// Adapted by: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 10/2022
 // Module Name: sbox_depth16
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: A depth-16, bitsliced S-box.
 // 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
+// Dependencies: top_linear_forward, top_linear_reverse, middle_nonlinear_shared,
+//               bottom_linear_forward, bottom_linear_reverse
 // 
 // Additional Comments: Based on design from "A depth-16 circuit for the
 //                      AES S-box".

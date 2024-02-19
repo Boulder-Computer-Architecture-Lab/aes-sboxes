@@ -1,20 +1,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 //
-// Author: Phaedra Curlin
+// Author:
 // 
 // Create Date: 10/2022
 // Module Name: affine_transform
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Affine transform for the S-box.
 //              Effectively computes:
 //                  for (i=0;i<8;i++){
 //                    b'[i] = b[i] ^ b[(i+4)%8] ^ b[(i+5)%8] ^ b[(i+6)%8] ^ b[(i+7)%8];
 //                  }                            
 //                  b' = b' ^ 0x63;
+//
 // Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: Calculations defined in the FIPS 197 standard.
 // 

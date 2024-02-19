@@ -1,18 +1,15 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: David Canright
-// Editor: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 11/2022
 // Module Name: fac_4
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Sums for shared factors, 4-bit -> 9.
 //              Adapted from D. Canright's Very Compact S-Box.
 // 
 // Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: None.
 // 
@@ -30,7 +27,7 @@ module fac_4 (
     assign al = a[1] ^ a[0];
     assign ah = a[3] ^ a[2];
     assign aa = sa[1] ^ sa[0];
-    /* output is three 3-bit shared factors: sum hi lo */
+
     assign Q = { aa, sa, ah, a[3:2], al, a[1:0] };
 
 endmodule // fac_4

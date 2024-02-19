@@ -1,18 +1,15 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Sumio Morioka and Akashi Satoh
-// Adapted by: Phaedra Curlin
+// Adapted by: 
 // 
 // Create Date: 08/2022
 // Module Name: pprm_inverter
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: GF(2^8) inverter for the 3-Stage Positive-Polarity
 //              Reed Muller S-box.
 // 
 // Dependencies: pprm_stage_1, pprm_stage_2, pprm_stage_3.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: Based on design from "An Optimized S-Box Circuit
 //                      Architecture for Low Power AES Design".

@@ -1,19 +1,16 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: David Canright
-// Editor: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 08/2022
 // Module Name: gf_muls_4
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Multiply in GF(2^4)/GF(2^2), shared factors, basis
 //              [alpha^8, alpha^2]. Adapted from D. Canright's Very Compact
 //              S-Box.
 // 
 // Dependencies: gf_muls_2, gf_muls_scl_2.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: None.
 // 

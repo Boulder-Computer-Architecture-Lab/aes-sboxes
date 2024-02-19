@@ -1,9 +1,0 @@
-name,area (um),power (W),delay (ps)
-sbox_full_lut,213.713,3.49531e-04,82
-sbox_inv_lut,149.570,6.11734e-04,137
-sbox_canright,59.523,9.17487e-04,193
-sbox_depth16,94.077,1.22449e-03,183
-sbox_new_area,59.621,9.83750e-04,189
-sbox_maximov,67.338,9.05121e-04,127
-sbox_bdd,204.325,1.16365e-03,105
-sbox_pprm,90.784,1.36511e-03,198

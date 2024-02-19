@@ -1,17 +1,14 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Reyhani-Masoleh, Taha, and Ashmawy
-// Adapted by: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 11/2022
 // Module Name: tr_in
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Transform in.
 // 
 // Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: Based on design from "New Area Record for the AES
 //                      Combined S-Box/Inverse S-Box"

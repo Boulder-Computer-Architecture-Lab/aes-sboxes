@@ -1,17 +1,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 //
-// Author: Phaedra Curlin
+// Author:
 // 
 // Create Date: 10/2022
 // Module Name: sbox_pprm_tb
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Testbench for evaluating S-boxes bytes.
 //              Verifies all S-box and InvSbox values output by the module.
 // 
 // Dependencies: sbox_pprm
-// 
-// Revision: 
-// Revision 0.01 - File Created
 // 
 // Additional Comments: None.
 // 

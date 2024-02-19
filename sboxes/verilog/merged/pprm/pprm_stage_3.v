@@ -1,17 +1,14 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Sumio Morioka & Akashi Satoh
-// Adapted by: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 10/2022
 // Module Name: pprm_stage_3
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Stage 3 of the 3-stage PPRM inverter.
 // 
 // Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: Based on design from "An Optimized S-Box Circuit
 //                      Architecture for Low Power AES Design".

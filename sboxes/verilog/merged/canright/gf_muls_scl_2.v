@@ -1,18 +1,15 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: David Canright
-// Editor: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 08/2022
 // Module Name: gf_muls_scl_2
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Multiply & scale by N in GF(2^2), shared factors, basis 
 //              [Omega^2,Omega]. Adapted from D. Canright's Very Compact S-Box.
 // 
 // Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: None.
 // 
@@ -28,9 +25,9 @@ module gf_muls_scl_2 (
     
     wire t, p, q;
     
-    assign t = ~(A[0] & B[0]); /* note: ~& syntax for NAND won’t compile */
+    assign t = ~(A[0] & B[0]); 
     assign p = (~(ab & cd)) ^ t;
     assign q = (~(A[1] & B[1])) ^ t;
-    assign Q = { p, q };
+    assign Q = {p, q};
 
 endmodule // gf_muls_scl_2

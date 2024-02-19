@@ -1,31 +1,28 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Alexander Maximov and Patrik Ekdahl
-// Editor: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 12/2023
 // Module Name: mulld
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Adapted from Alexander Maximov and Patrik Ekdahl.
 // 
 // Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
-
 module mulld (
-    input wire Y0, Y1, Y2, Y3,
-    input wire L0, L12, L16, L20, L1, L5, L9, L13, L17, L21, L25, L29, L2, L6, L10, L14, L18, L22, L26, L30, L3, L7, L11, L15, L19, L23, L27, L31,
-    output wire K0, K12, K16, K20, K1, K5, K9, K13, K17, K21, K25, K29, K2, K6, K10, K14, K18, K22, K26, K30, K3, K7, K11, K15, K19, K23, K27, K31
+        input   wire    Y0, Y1, Y2, Y3,
+        input   wire    L0, L12, L16, L20, L1, L5, L9, L13, L17, L21, L25, L29, L2, L6, L10, L14, L18, L22, L26, L30, L3, L7, L11, L15, L19, L23, L27, L31,
+        output  wire    K0, K12, K16, K20, K1, K5, K9, K13, K17, K21, K25, K29, K2, K6, K10, K14, K18, K22, K26, K30, K3, K7, K11, K15, K19, K23, K27, K31
     );
     
+    //----------------------------------------------------------------
+    // Continuous Assignments
+    //----------------------------------------------------------------
     assign K0  = ~(Y0 & L0 ); // NAND
     assign K12 = ~(Y0 & L12); // NAND
     assign K16 = ~(Y0 & L16); // NAND

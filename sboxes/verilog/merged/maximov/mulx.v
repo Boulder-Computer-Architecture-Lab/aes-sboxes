@@ -1,23 +1,18 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Alexander Maximov and Patrik Ekdahl
-// Editor: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 12/2023
 // Module Name: mulx
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Adapted from Alexander Maximov and Patrik Ekdahl.
 // 
 // Dependencies: None.
 // 
-// Revision:
-// Revision 0.01 - File Created
-// 
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module mulx(
     input wire Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17,
@@ -25,8 +20,14 @@ module mulx(
     
     );
 
+    //----------------------------------------------------------------
+    // Wires/Regs
+    //----------------------------------------------------------------
     wire T20, T21, T22, T10, T11, T12, T13;
 
+    //----------------------------------------------------------------
+    // Continuous Assignments
+    //----------------------------------------------------------------
     assign T20 = ~(Q6 & Q12);
     assign T21 = ~(Q3 & Q14);
     assign T22 = ~(Q1 & Q16);

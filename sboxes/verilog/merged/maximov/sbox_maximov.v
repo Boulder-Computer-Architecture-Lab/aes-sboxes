@@ -1,32 +1,29 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Alexander Maximov and Patrik Ekdahl
-// Editor: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 12/2023
 // Module Name: sbox_maximov
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Fast S-box or Inv-Sbox.
 //              Adapted from Alexander Maximov and Patrik Ekdahl.
 // 
 // Dependencies: xor8_4, mulx, inv, mullc, mulld, ctop.
 // 
-// Revision:
-// Revision 0.01 - File Created
-// 
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
 module sbox_maximov (
-    input   wire    [7:0]   byte_in,
-    input   wire            encrypt,
-    output  wire    [7:0]   byte_out
+        input   wire    [7:0]   byte_in,
+        input   wire            encrypt,
+        output  wire    [7:0]   byte_out
     );
 
-    // generarte wires
+    //----------------------------------------------------------------
+    // Wires/Regs
+    //----------------------------------------------------------------
     wire T0, T1, T2, T3, T4, T5, T6, T7, T8, T9;
     wire T10, T11, T12, T13, T14, T15, T16, T17, T18, T19;
     wire Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9;
@@ -46,7 +43,9 @@ module sbox_maximov (
     wire L20, L21, L22, L23, L24, L25, L26, L27, L28, L29;
     wire L30, L31;
 
-    // xor8_4
+    //----------------------------------------------------------------
+    // Modules
+    //----------------------------------------------------------------
     xor8_4 xor8_4 (
         .K0(K0), .K1(K1), .K2(K2), .K3(K3), .K4(K4), .K5(K5),
         .K6(K6), .K7(K7), .K8(K8), .K9(K9), .K10(K10), .K11(K11),
@@ -57,7 +56,6 @@ module sbox_maximov (
         .R(byte_out)
     );
     
-    // mulx
     mulx mulx (
         .Q0(Q0), .Q1(Q1), .Q2(Q2), .Q3(Q3), .Q4(Q4), .Q5(Q5),
         .Q6(Q6), .Q7(Q7), .Q8(Q8), .Q9(Q9), .Q10(Q10), .Q11(Q11),
@@ -65,13 +63,11 @@ module sbox_maximov (
         .Q17(Q17), .X0(X0), .X1(X1), .X2(X2), .X3(X3)
     );
  
-    // inv
     inv inv (
         .X0(X0), .X1(X1), .X2(X2), .X3(X3),
         .Y0(Y0), .Y1(Y1), .Y2(Y2), .Y3(Y3)
     );
 
-    // mullc
     mullc mullc (
         .ZF(encrypt),
         .Y0(Y0),
@@ -79,7 +75,6 @@ module sbox_maximov (
         .K4(K4), .K8(K8), .K24(K24), .K28(K28)
     );
 
-    // mulld
     mulld mulld (
         .Y0(Y0), .Y1(Y1), .Y2(Y2), .Y3(Y3),
         .L0(L0), .L12(L12), .L16(L16), .L20(L20),

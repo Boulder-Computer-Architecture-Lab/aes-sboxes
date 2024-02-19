@@ -1,18 +1,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 //
-// Author: Phaedra Curlin
+// Author:
 // 
 // Create Date: 10/2022
-// Module Name: sbox_tb
-// Project Name: aes-sboxes
+// Module Name: sbox_calik_tb
+// Project Name: aes_sboxes
 // Description: Testbench for evaluating S-boxes bytes.
 //              Verifies all S-box and InvSbox values output by the module.
 // 
-// Dependencies: sbox_mux, sbox_full_lut, sbox_inv_lut, sbox_canright, 
-//               sbox_pprm, sbox_depth16, sbox_new_area.
-// 
-// Revision: 
-// Revision 0.01 - File Created
+// Dependencies: sbox_calik
 // 
 // Additional Comments: None.
 // 
@@ -83,4 +79,4 @@ module sbox_calik_tb();
         $finish;
     end
 
-endmodule // sbox_tb
+endmodule // sbox_calik_tb

@@ -1,17 +1,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 //
-// Author: Phaedra Curlin
+// Author:
 // 
 // Create Date: 08/2023
 // Module Name: sbox_canright_tb
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Testbench for evaluating S-boxes bytes.
 //              Verifies all S-box and InvSbox values output by the module.
 // 
 // Dependencies: sbox_canright
-// 
-// Revision: 
-// Revision 0.01 - File Created
 // 
 // Additional Comments: None.
 // 
@@ -27,7 +24,7 @@
 
 `timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
-module sbox_canright_tb();
+module sbox_canright_tb ();
     //----------------------------------------------------------------
     // Integers
     //----------------------------------------------------------------

@@ -1,34 +1,36 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Cagdas Calik
-// Editor: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 08/2023
 // Module Name: sbox_calik
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: 113 gate S-box with depth 27. Adapted from
 //              https://www.cs.yale.edu/homes/peralta/CircuitStuff/SLP_AES_113.txt
 // 
 // Dependencies: None.
 // 
-// Revision:
-// Revision 0.01 - File Created
-// 
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
 
 module sbox_calik (
         input   wire    [7:0]   byte_in,
         output  wire    [7:0]   byte_out
     );
 
+    //----------------------------------------------------------------
+    // Wires/Regs
+    //----------------------------------------------------------------
     wire [21:0] y;
     wire [45:0] t;
     wire [26:0] tc;
     wire [17:0] z;
 
+    //----------------------------------------------------------------
+    // Continuous Assignments
+    //----------------------------------------------------------------
     assign y[14] = byte_in[4] ^ byte_in[2];
     assign y[13] = byte_in[7] ^ byte_in[1];
     assign y[9] = byte_in[7] ^ byte_in[4];

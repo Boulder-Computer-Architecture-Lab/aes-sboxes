@@ -1,36 +1,34 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Alexander Maximov and Patrik Ekdahl
-// Editor: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 12/2023
 // Module Name: ctop
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Top layer.
 //              Adapted from Alexander Maximov and Patrik Ekdahl.
 // 
 // Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
-// 
+//
 // Additional Comments: None.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-`timescale 1 ns / 1 ns  // time-unit = 1 ns, precision = 1 ns
-
 module ctop (
-    input wire [7:0] U,
-    input wire ZF,
-    output wire Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9,
-    output wire Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17,
-    output wire L0, L1, L2, L3, L4, L5, L6, L7, L8, L9,
-    output wire L10, L11, L12, L13, L14, L15, L16, L17,
-    output wire L18, L19, L20, L21, L22, L23, L24, L25,
-    output wire L26, L27, L28, L29, L30, L31
+        input   wire    [7:0]   U,
+        input   wire            ZF,
+        output  wire            Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9,
+        output  wire            Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17,
+        output  wire            L0, L1, L2, L3, L4, L5, L6, L7, L8, L9,
+        output  wire            L10, L11, L12, L13, L14, L15, L16, L17,
+        output  wire            L18, L19, L20, L21, L22, L23, L24, L25,
+        output  wire            L26, L27, L28, L29, L30, L31
     );
 
+    //----------------------------------------------------------------
+    // Wires/Regs
+    //----------------------------------------------------------------
     wire A0, A1, A2, A3, A4, A5, A6, A7, A8, A9;
     wire A10, A11, A12, A13, A14, A15, A16, A17, A18, A19;
     wire A20, A21, A22, A23, A24, A25, A26, A27, A28, A29;
@@ -40,6 +38,9 @@ module ctop (
     wire K20, K21, K22, K23, K24, K25, K26, K27, K28, K29;
     wire K30, K31;
     
+    //----------------------------------------------------------------
+    // Continous assignments
+    //---------------------------------------------------------------- 
     assign A0  = ~(U[5] ^ U[3]); // XNOR
     assign A1  = ~(U[6] ^ A0); // XNOR
     assign A2  = ~(U[2] ^ U[0]); // XNOR
@@ -123,10 +124,10 @@ module ctop (
     assign L31 = A30 ^ A36; // XOR
     assign A37 = ZF ? L26 : A0; // MUX
     assign L22 = Q16 ^ A37; // XOR
-    assign Q17 = U[7]; // Direct assignment
-    assign L0 = Q10; // Direct assignment
-    assign L1 = Q6; // Direct assignment
-    assign L2 = Q9; // Direct assignment
-    assign L3 = Q8; // Direct assignment
+    assign Q17 = U[7];
+    assign L0 = Q10;
+    assign L1 = Q6;
+    assign L2 = Q9;
+    assign L3 = Q8; 
 
-endmodule
+endmodule // ctop

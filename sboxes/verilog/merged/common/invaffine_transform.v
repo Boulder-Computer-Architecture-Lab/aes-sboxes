@@ -1,20 +1,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 //
-// Author: Phaedra Curlin
+// Author:
 // 
 // Create Date: 10/2022
 // Module Name: invaffine_transform
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Inverse affine transform for the S-box.
 //              Effectively computes:
 //                  for (i=0;i<8;i++){
 //                      b'[i] = b[(i+2)%8] ^ b[(i+5)%8] ^ b[(i+7)%8]
 //                  }           
 //                  b' = b' ^ 0x05;
+//
 // Dependencies: None.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: Calculations defined in the FIPS 197 standard.
 // 
@@ -30,6 +28,7 @@ module invaffine_transform (
     // Wires/Regs
     //----------------------------------------------------------------
     wire [7:0] A;
+    
     //----------------------------------------------------------------
     // Continous assignments
     //---------------------------------------------------------------- 
@@ -46,4 +45,4 @@ module invaffine_transform (
     // Vector addition
     assign byte_out = (~encrypt)? (A ^ 8'h05) : 0;
 
-endmodule //invaffine_transform
+endmodule // invaffine_transform

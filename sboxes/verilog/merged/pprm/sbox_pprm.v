@@ -1,17 +1,14 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 // Original Author: Sumio Morioka and Akashi Satoh
-// Adapted by: Phaedra Curlin
+// Adapted by:
 // 
 // Create Date: 10/2022
 // Module Name: sbox_pprm
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: 3-stage Positive-Polarity Reed Muller S-box.
 // 
 // Dependencies: affine_transform, pprm_inverter, invaffine_transform.
-// 
-// Revision:
-// Revision 0.01 - File Created
 // 
 // Additional Comments: Based on design from "An Optimized S-Box Circuit
 //                      Architecture for Low Power AES Design".

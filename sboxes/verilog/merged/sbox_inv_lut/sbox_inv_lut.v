@@ -1,17 +1,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 //
-// Author: Phaedra Curlin
+// Author:
 // 
 // Create Date: 10/2022
 // Module Name: sbox_inv_lut
-// Project Name: aes-sboxes
+// Project Name: aes_sboxes
 // Description: Logic based-affine transform and ROM-basde inversion over GF(2^8)
 //              AES S-box.
 // 
-// Dependencies: inverter.mem, affine_transform, invaffine_transform
-// 
-// Revision:
-// Revision 0.01 - File Created
+// Dependencies: affine_transform, invaffine_transform
 // 
 // Additional Comments: None.
 // 
