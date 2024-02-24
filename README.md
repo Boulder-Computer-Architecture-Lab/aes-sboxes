@@ -2,7 +2,7 @@
 
 This repository contains various AES S-box implementations.
 
-`aes/` contains AES implementations sources from other repositories.
+`aes/` contains AES implementations sourced from other repositories.
 
 `sboxes/` contains 10 different S-boxes. Additional information is provided by the `README.md` located in each subdirectory.
 
