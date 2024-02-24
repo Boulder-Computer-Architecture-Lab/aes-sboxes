@@ -6,7 +6,9 @@
 // Create Date: 12/2023
 // Module Name: mulx
 // Project Name: aes_sboxes
-// Description: Adapted from Alexander Maximov and Patrik Ekdahl.
+// Description: Adapted from Alexander Maximov and Patrik Ekdahl's 
+//              "New Circuit Minimization Techniques 
+//              for Smaller and Faster AES SBoxes"
 // 
 // Dependencies: None.
 // 

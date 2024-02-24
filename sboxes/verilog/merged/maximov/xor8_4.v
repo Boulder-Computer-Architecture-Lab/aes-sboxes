@@ -7,7 +7,9 @@
 // Module Name: xor8_4
 // Project Name: aes_sboxes
 // Description: 8 XOR4 gates.
-//              Adapted from Alexander Maximov and Patrik Ekdahl.
+//              Adapted from Alexander Maximov and Patrik Ekdahl's 
+//              "New Circuit Minimization Techniques 
+//              for Smaller and Faster AES SBoxes"
 // 
 // Dependencies: None.
 // 

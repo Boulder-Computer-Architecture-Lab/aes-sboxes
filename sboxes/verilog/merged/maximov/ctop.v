@@ -7,7 +7,9 @@
 // Module Name: ctop
 // Project Name: aes_sboxes
 // Description: Top layer.
-//              Adapted from Alexander Maximov and Patrik Ekdahl.
+//              Adapted from Alexander Maximov and Patrik Ekdahl's 
+//              "New Circuit Minimization Techniques 
+//               for Smaller and Faster AES SBoxes"
 // 
 // Dependencies: None.
 //
