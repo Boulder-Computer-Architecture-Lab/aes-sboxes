@@ -4,7 +4,7 @@ This repository contains various AES S-box implementations.
 
 `aes/` contains AES implementations sourced from other repositories and can be pulled by using `--recursive` when cloning.
 
-`sboxes/` contains 10 different S-boxes. Additional information is provided by the `README.md` located in each subdirectory.
+`sboxes/` contains 11 different S-boxes. Additional information is provided by the `README.md` located in each subdirectory.
 
 Testbenches for each of the sboxes are located in `sboxes/tb`.
 
