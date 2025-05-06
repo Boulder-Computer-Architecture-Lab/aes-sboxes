@@ -2,6 +2,14 @@
 
 This repository contains various AES S-box implementations.
 
+To clone the repository and its submodules:
+
+```
+git clone https://github.com/Boulder-Computer-Architecture-Lab/aes-sboxes.git --recursive
+```
+
+## Structure
+
 `aes/` contains AES implementations sourced from other repositories and can be pulled by using `--recursive` when cloning.
 
 `sboxes/` contains 11 different S-boxes. Additional information is provided by the `README.md` located in each subdirectory.
@@ -32,6 +40,8 @@ Testbenches for each of the sboxes are located in `sboxes/tb`.
         │   └── sbox_new_area
         └── tb
 ```
+
+## Citing
 
 To cite this work, please use the following reference:
 
