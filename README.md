@@ -32,3 +32,24 @@ Testbenches for each of the sboxes are located in `sboxes/tb`.
         │   └── sbox_new_area
         └── tb
 ```
+
+To cite this work, please use the following reference:
+
+```
+@article{curlin_survey_2025,
+author = {Curlin, Phaedra Sophia and Heiges, Jeff and Chan, Calvin and Lehman, Tamara Silbergleit},
+title = {A Survey of Hardware-Based AES SBoxes: Area, Performance, and Security},
+year = {2025},
+issue_date = {September 2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {57},
+number = {9},
+issn = {0360-0300},
+doi = {10.1145/3724114},
+journal = {ACM Comput. Surv.},
+month = apr,
+articleno = {229},
+numpages = {37}
+}
+```
